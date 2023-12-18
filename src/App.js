@@ -11,12 +11,10 @@ import Loading from './components/Loading/Loading'
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    window.onload = () => {
-      setIsLoading(false);
-    };
-  }, []);
+  
+  window.onload = () => {
+    setIsLoading(false);
+  };
 
   return (
     <>
