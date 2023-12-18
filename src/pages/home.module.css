@@ -27,7 +27,7 @@
 }
 .infobox{
     width: 90%;
-    height: 100px;
+    min-height: 100px;
     background: rgba(0, 0, 0, 0.558);
     display: flex;
     flex-direction: column;
@@ -35,10 +35,10 @@
     justify-content: center;
     font-size: 100%;
     color: rgb(255, 255, 255);
-    border-top: 4px solid rgb(164,136,46);
+    border-top: 4px solid rgb(255, 196, 0);
 }
 .infobox span:first-child{
-    font-size: 200%;
+    font-size: 160%;
     font-weight: bold;
 }
 .video{
