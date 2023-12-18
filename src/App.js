@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import TopNavBar from './components/navbar/TopNavBar'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Service from './pages/Service'
+import Contact from './pages/Contact'
+import Gallery from './pages/Gallerys'
+import About from './pages/About'
+import GoTop from './components/navbar/GoTop'
+import Loading from './components/Loading/Loading'
 
-function App() {
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    window.onload = () => {
+      setIsLoading(false);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    {isLoading ?
+    <Loading/>
+    :
+    <div>
+      <TopNavBar/>
+      <Routes>
+      <Route element={<Home/>} path='/'/>
+      <Route element={<Service/>} path='/service'/>
+      <Route element={<About/>} path='/about'/>
+      <Route element={<Gallery/>} path='/gallery'/>
+      <Route element={<Contact/>} path='/contact'/>
+    </Routes>
+    <GoTop/>
+    </div>}
+    </>
+  )
 }
 
-export default App;
+export default App

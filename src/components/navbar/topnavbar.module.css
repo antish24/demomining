@@ -1,0 +1,113 @@
+.cont{
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.gotop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background:rgb(164,136,46);
+    padding: 10px;
+    color: white;
+}
+.fixedcont{
+    width: 100vw;
+    height: 70px;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.005);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.1px);
+    -webkit-backdrop-filter: blur(18.1px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+}
+.navbox{
+    height: 50px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.logobox{
+    width: max-content;
+    height:100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.logoname{
+    font-size: 20px;
+}
+.logo{
+    height:90px;
+    width: 60px;
+    object-fit: cover;
+}
+.linkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.linkbox a{
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(164,136,46);
+    border-bottom: 3px solid;
+    padding-bottom: 3px;
+}
+.menulinkbox a{
+    text-decoration: none;
+    font-size: 16px;
+}
+.menubox{
+    display: none;
+}
+.closemenu{
+    display: none;
+}
+.menulinkbox{
+    display: none;
+}
+@media(max-width:700px){
+    .menulinkbox{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.005);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(18.1px);
+        -webkit-backdrop-filter: blur(18.1px);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        position: fixed;
+        right: 0;
+        z-index: 10;
+        transition: all .7s;
+    }
+    .menubox{
+        display: flex;
+    }
+    .linkbox{
+        display: none;
+    }
+    .closemenu{
+        display: flex;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}

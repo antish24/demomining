@@ -1,0 +1,11 @@
+.cont{
+    height: 400vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    height: 100%;
+    width: 90%;
+}
