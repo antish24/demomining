@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import TopNavBar from './components/navbar/TopNavBar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
@@ -8,6 +8,7 @@ import Gallery from './pages/Gallerys'
 import About from './pages/About'
 import GoTop from './components/navbar/GoTop'
 import Loading from './components/Loading/Loading'
+import Footer from './components/footer/Footer'
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,6 +32,7 @@ const App = () => {
       <Route element={<Contact/>} path='/contact'/>
     </Routes>
     <GoTop/>
+    <Footer/>
     </div>}
     </>
   )
