@@ -5,6 +5,9 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
 }
 .top{
     width: 95%;
