@@ -17,61 +17,61 @@ const Testimonials = () => {
       "id": 1,
       "name": "John Smith",
       "rate": 4,
-      "note": "MiningCo has consistently delivered high-quality products and exceptional customer service. Their expertise and commitment to safety have been instrumental in our mining operations."
+      "note": "ZOEas consistently delivered high-quality products and exceptional customer service. Their expertise and commitment to safety have been instrumental in our mining operations."
     },
     {
       "id": 2,
       "name": "Sarah Johnson",
       "rate": 5,
-      "note": "MiningCo's products have exceeded our expectations in terms of quality and durability. Their prompt delivery and excellent customer support have made them our preferred supplier."
+      "note": "ZOE products have exceeded our expectations in terms of quality and durability. Their prompt delivery and excellent customer support have made them our preferred supplier."
     },
     {
       "id": 3,
       "name": "Michael Thompson",
       "rate": 2,
-      "note": "We have been using MiningCo's mining machinery for several years, and we are impressed with their performance and reliability. Their equipment has significantly improved our operational efficiency."
+      "note": "We have been using ZOE mining machinery for several years, and we are impressed with their performance and reliability. Their equipment has significantly improved our operational efficiency."
     },
     {
       "id": 4,
       "name": "Emily Wilson",
       "rate": 5,
-      "note": "MiningCo's team of experts provided us with invaluable guidance throughout our mining project. Their knowledge and support helped us overcome challenges and achieve remarkable results."
+      "note": "ZOE team of experts provided us with invaluable guidance throughout our mining project. Their knowledge and support helped us overcome challenges and achieve remarkable results."
     },
     {
       "id": 5,
       "name": "Daniel Lee",
       "rate": 4.5,
-      "note": "MiningCo's mining machinery has consistently performed at a high level, exceeding our expectations. The equipment's durability and efficiency have been instrumental in maximizing our productivity."
+      "note": "ZOE mining machinery has consistently performed at a high level, exceeding our expectations. The equipment's durability and efficiency have been instrumental in maximizing our productivity."
     },
     {
       "id": 6,
       "name": "Sophia Rodriguez",
       "rate": 3,
-      "note": "MiningCo's commitment to delivering products on time has been impressive. Their customer service team is responsive and always ready to assist with any inquiries or concerns."
+      "note": "ZOE commitment to delivering products on time has been impressive. Their customer service team is responsive and always ready to assist with any inquiries or concerns."
     },
     {
       "id": 7,
       "name": "David Chen",
       "rate": 5,
-      "note": "MiningCo has proven to be a trustworthy partner in our mining ventures. Their integrity, transparency, and adherence to ethical practices make them a reliable choice in the industry."
+      "note": "ZOEas proven to be a trustworthy partner in our mining ventures. Their integrity, transparency, and adherence to ethical practices make them a reliable choice in the industry."
     },
     {
       "id": 8,
       "name": "Olivia Brown",
       "rate": 4.5,
-      "note": "MiningCo's dedication to innovation has resulted in groundbreaking solutions to common mining challenges. Their forward-thinking approach has significantly improved our operations."
+      "note": "ZOE dedication to innovation has resulted in groundbreaking solutions to common mining challenges. Their forward-thinking approach has significantly improved our operations."
     },
     {
       "id": 9,
       "name": "Liam Wilson",
       "rate": 4,
-      "note": "Safety is paramount in the mining industry, and MiningCo excels in this aspect. Their rigorous safety protocols and training programs have created a secure working environment for our team."
+      "note": "Safety is paramount in the mining industry, and ZOExcels in this aspect. Their rigorous safety protocols and training programs have created a secure working environment for our team."
     },
     {
       "id": 10,
       "name": "Ava Thompson",
       "rate": 3,
-      "note": "MiningCo goes above and beyond to ensure customer satisfaction. Their attention to detail, personalized service, and willingness to address our specific needs have made them our preferred mining supplier."
+      "note": "ZOEoes above and beyond to ensure customer satisfaction. Their attention to detail, personalized service, and willingness to address our specific needs have made them our preferred mining supplier."
     },
   ]
   

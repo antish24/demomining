@@ -1,33 +1,44 @@
 import React, { useEffect, useState } from "react";
 import styles from "./productshow.module.css";
-import opal1 from "../../assets/opal1.png";
-import opal2 from "../../assets/opal2.png";
-import opal3 from "../../assets/opal3.png";
-import opal4 from "../../assets/logopng.png";
+import opal1 from "../../assets/products/Coal.png";
+import opal2 from "../../assets/products/lithium.png";
+import opal3 from "../../assets/products/tantalum.png";
+import opal4 from "../../assets/products/opal.png";
+import opal5 from "../../assets/products/amytst.png";
+
 import { NavLink } from "react-router-dom";
 
 const ProductShow = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const [selectedItem,setSelectedItem]=useState(2)
+  const [selectedItem,setSelectedItem]=useState(1)
 
   // useEffect(() => {
   //   setIsVisible(true);
   // }, [selectedItem]);
 
   useEffect(() => {
+    setIsVisible(false);
+    const interval = setInterval(() => {
+      setSelectedItem((prevItem) => (prevItem === 5 ? 1 : prevItem + 1));
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const timeout = setTimeout(() => {
       setIsVisible(false);
-      setInterval(() => {
-        setIsVisible(true)
-      }, 1000);
+    }, 7000);
+    return () => clearTimeout(timeout);
   }, [selectedItem]);
 
   const minerals = [
     {
       id: 1,
-      name: 'Silka Sand',
+      name: 'Coal',
       img:opal1,
-      description: 'Abundant mineral with crystal structure. Used in jewelry and electronics.',
+      description: 'Abundant mineral with coal structure. Used in jewelry and electronics. Used in jewelry and electronics.',
     },
     {
       id: 2,
@@ -50,7 +61,7 @@ const ProductShow = () => {
     {
       id: 5,
       name: 'Amytst quartz',
-      img:opal1,
+      img:opal5,
       description: 'Sheet silicate minerals with excellent insulating properties.',
     },
   ];
@@ -66,7 +77,8 @@ const ProductShow = () => {
     <div className={styles.cont}>
       <div className={styles.slider}>
         <div className={styles.lines}>{products.map(l=><span key={l.id} style={{background:selectedItem >= l.id?'rgb(164,136,46)':'transparent'}} className={styles.line}></span>)}</div>
-        <div className={styles.nums}>{products.map(l=><span key={l.id} style={{background:selectedItem===l.id?'rgb(164,136,46)':'transparent',color:selectedItem===l.id?'white':'rgb(164,136,46)'}} onClick={()=>setSelectedItem(l.id)} className={styles.rolnum}>{l.rol}</span>)}</div>
+        <div className={styles.nums}>{products.map(l=><span key={l.id} style={{background:selectedItem===l.id?'rgb(164,136,46)':'transparent',color:selectedItem===l.id?'white':'rgb(164,136,46)'}}  className={styles.rolnum}>{l.rol}</span>)}</div>
+        {/* <div className={styles.nums}>{products.map(l=><span key={l.id} style={{background:selectedItem===l.id?'rgb(164,136,46)':'transparent',color:selectedItem===l.id?'white':'rgb(164,136,46)'}} onClick={()=>setSelectedItem(l.id)} className={styles.rolnum}>{l.rol}</span>)}</div> */}
       </div>
       <div className={styles.contentbox}>
       <div className={styles.content}>

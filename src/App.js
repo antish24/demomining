@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import TopNavBar from './components/navbar/TopNavBar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
@@ -7,23 +7,14 @@ import Contact from './pages/Contact'
 import Gallery from './pages/Gallerys'
 import About from './pages/About'
 import GoTop from './components/navbar/GoTop'
-import Loading from './components/Loading/Loading'
 import Footer from './components/footer/Footer'
 import Appointment from './pages/Apponitment'
 import DetailPage from './pages/DetailPage'
+import GalleryDetail from './pages/GalleryDetail'
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  
-  window.onload = () => {
-    setIsLoading(false);
-  };
 
   return (
-    <>
-    {isLoading ?
-    <Loading/>
-    :
     <div>
       <TopNavBar/>
       <Routes>
@@ -34,11 +25,11 @@ const App = () => {
       <Route element={<Contact/>} path='/contact'/>
       <Route element={<Appointment/>} path='/appointment'/>
       <Route element={<DetailPage/>} path='/service/:id'/>
+      <Route element={<GalleryDetail/>} path='/gallery/:id'/>
     </Routes>
     <GoTop/>
     <Footer/>
-    </div>}
-    </>
+    </div>
   )
 }
 

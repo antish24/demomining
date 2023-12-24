@@ -18,7 +18,7 @@ const Home = () => {
         <video className={styles.video} src={video} autoPlay loop muted />
         <div className={styles.logo}>
           <div className={styles.infobox}>
-            <span>Welcome to Acordia Mining</span>
+            <span>Welcome to ZOE Mining</span>
             <span>
               Unleashing the Potential of Minerals. Innovative, Sustainable,
               Responsible. Building Strong Communities, Growing Together.

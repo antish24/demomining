@@ -2,12 +2,13 @@ import React from 'react'
 import styles from './galleryreview.module.css'
 import { NavLink } from 'react-router-dom'
 import GalleryCard from './GalleryCard'
-import sandpik from '../../assets/logo.png'
-import lithiumpik from '../../assets/logo.png'
-import tanpik from '../../assets/logo.png'
-import coalpik from '../../assets/logo.png'
-import ironpik from '../../assets/logo.png'
-import opalpik from '../../assets/logo.png'
+import sandpik from '../../assets/products/sikasand.png'
+import lithiumpik from '../../assets/products/lithium.png'
+import tanpik from '../../assets/products/tantalum.png'
+import coalpik from '../../assets/products/Coal.png'
+import ironpik from '../../assets/products/iron.png'
+import opalpik from '../../assets/products/opal.png'
+
 const GalleryReview = () => {
   const scrollTop=()=>{
     window.scrollTo({ top: 0, behavior: 'smooth' });

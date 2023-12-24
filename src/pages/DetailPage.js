@@ -28,7 +28,7 @@ const DetailPage = () => {
           </div>
           <div className={styles.lists}>
             <div className={styles.contlist}></div>
-            <img className={styles.imgbox} src={data.pic} alt={id} />
+            <img className={styles.imgbox} src={data.pic} alt={id} style={{objectFit:data.pic.endsWith('jpg')?'cover':'contain'}} />
             <div className={styles.textbox}>
               <span className={styles.detailtitle}>{id}</span>
               <span className={styles.detaildes}>{data.description}</span>

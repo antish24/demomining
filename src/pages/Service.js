@@ -6,11 +6,10 @@ import ProductCard from "../components/cards/ProductCard";
 import pic from '../assets/opal2.png'
 import pic2 from '../assets/opal1.png'
 import pic3 from '../assets/opal3.png'
-import pic4 from '../assets/opal4.png'
+import pic4 from '../assets/gallery.jpg'
 import pic5 from '../assets/contact.jpg'
 import pic6 from '../assets/product.jpg'
 import pic7 from '../assets/about.jpg'
-import pic8 from '../assets/gallery.jpg'
 
 const Service = () => {
 
@@ -27,19 +26,19 @@ const Service = () => {
     },
     {
       "id": 2,
-      "name": "Efficient Resource Extraction",
+      "name": "Efficient Extraction",
       "pic": pic2,
       "description": "Our mining company offers top-of-the-line mining machinery and equipment to facilitate efficient resource extraction. We understand the importance of optimizing mining operations for productivity and profitability. That's why we provide cutting-edge machinery, specifically designed and engineered for the extraction of various valuable resources. Our advanced equipment, including drilling rigs, excavators, loaders, and haul trucks, ensures efficient and safe resource extraction. With our commitment to technological innovation and industry best practices, we empower mining companies to maximize their resource extraction capabilities, leading to higher yields and operational success."
     },
     {
       "id": 3,
-      "name": "Secure Mining Environment",
+      "name": "Secure Environment",
       "pic": pic3,
       "description": "At our mining company, we prioritize the safety of mining operations. We offer a range of safety equipment and implement stringent safety measures to ensure a secure mining environment. Our experienced safety professionals conduct thorough risk assessments and provide tailored safety solutions to mitigate potential hazards. From personal protective equipment to advanced monitoring systems, we provide mining companies with the necessary tools and expertise to maintain a safe working environment. With our commitment to safety excellence, we help mining operations minimize accidents, protect their workforce, and comply with industry regulations."
     },
     {
       "id": 4,
-      "name": "Mineral Separation & Refinement",
+      "name": "Separation & Refinement",
       "pic": pic4,
       "description": "Our mining company specializes in advanced equipment and processes for efficient mineral separation and refinement. We understand the importance of extracting valuable minerals with high precision and purity. That's why we offer cutting-edge technologies, such as magnetic separators, flotation cells, and gravity concentrators, to ensure optimal mineral separation. Additionally, our advanced refining processes enable the production of high-quality mineral products that meet industry standards. With our expertise in mineral processing and refinement, we assist mining companies in maximizing the value of their extracted minerals and achieving market competitiveness."
     },
@@ -51,34 +50,17 @@ const Service = () => {
     },
     {
       "id": 6,
-      "name": "Mining Machinery Components",
+      "name": "Mining Machinery",
       "pic": pic,
       "description": "Our mining company understands the importance of keeping mining machinery operating at peak performance. We offer a comprehensive range of spare parts and components for various mining equipment, ensuring minimal downtime and efficient maintenance. Whether it's replacement parts for crushers, conveyor systems, or hydraulic components, we provide high-quality products that meet industry standards. Our extensive inventory and quick turnaround times ensure that mining operations can rely on us for prompt and reliable spare parts supply. With our commitment to customer satisfaction, we aim to be your trusted partner in keeping your mining machinery running smoothly."
     },
     {
       "id": 7,
-      "name": "Technical Support Maintenance",
-      "pic": pic,
-      "description": "At our mining company, we offer comprehensive technical support and maintenance services for mining equipment. Our team of skilled technicians and engineers provides on-site assistance, troubleshooting, and repairs to ensure optimal performance of mining machinery. We also offer preventive maintenance programs to minimize unplanned downtime and extend the lifespan of equipment. With our expertise and responsive service, mining companies can rely on us for timely assistance and efficient maintenance solutions. Our goal is to help our clients maximize the reliability and longevity of their mining equipment, reducing operational costs and enhancing productivity."
-    },
-    {
-      "id": 8,
-      "name": "Training & Consultancy Services",
-      "pic": pic2,
-      "description": "Our mining company offers comprehensive training programs and consultancy services to enhance mining operations. We understand the importance of equipping mining personnel with the necessary knowledge and skills to optimize their performance. Our training programs cover various aspects of mining, including safety procedures, equipment operation, and environmental regulations. Additionally, our experienced consultants provide valuable insights and recommendations to improve operational efficiency, cost-effectiveness, and sustainability. By investing in training and consulting, mining companies can empower their workforce and gain a competitive edge in the industry."
-    },
-    {
-      "id": 9,
-      "name": "Opal Mining Services",
+      "name": "Gemistone Mining",
       "pic": pic7,
       "description": "Our mining company specializes in opal mining services, catering to the unique requirements of opal extraction. We possess extensive knowledge and experience in opal deposits, mining techniques, and processing methods. Our services encompass prospecting, tunneling, shaft sinking, and opal cutting and polishing. We provide specialized equipment and skilled personnel to ensure efficient and precise opal mining operations. Our focus on quality and attention to detail ensure that our clients receive opals of exceptional beauty and value. Trust us to handle your opal mining needs with professionalism and expertise."
     },
-    {
-      "id": 10,
-      "name": "Crystal Opal Mining",
-      "pic": pic8,
-      "description": "Our mining company specializes in crystal opal mining, offering a unique and valuable service in the opal industry. Crystal opals are known for their mesmerizing play of colors and exceptional transparency. We have developed specialized mining techniques and processes to extract crystal opals with precision and care. Our team of skilled miners and lapidaries meticulously handle crystal opal specimens, ensuring minimal damage and maximum preservation of their natural beauty. With our commitment to excellence and passion for opals, we provide mining services that cater specifically to crystal opal enthusiasts and collectors."
-    }
+    
   ];
 
   return (

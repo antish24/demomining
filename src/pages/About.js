@@ -14,6 +14,20 @@ const About = () => {
       <PageIntro text={"About Us"} img={zimg} />
       <div className={styles.cont}>
         <div className={styles.box}>
+          <span className={styles.awardtitle}>Awards and Certficates</span>
+          <div className={styles.titleline}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        <div className={styles.awards}>
+            <img src={zimg} alt="award" className={styles.award}/>
+            <img src={zimg} alt="award" className={styles.award}/>
+            <img src={zimg} alt="award" className={styles.award}/>
+            <img src={zimg} alt="award" className={styles.award}/>
+            <img src={zimg} alt="award" className={styles.award}/>
+            <img src={zimg} alt="award" className={styles.award}/>
+          </div>
           <div className={styles.lists}>
             <div className={styles.contlist}></div>
             <img className={styles.imgbox} src={zimg1} alt={'about'} />
@@ -31,7 +45,7 @@ const About = () => {
           </div>
 
           <div className={styles.lists}>
-            <div className={styles.contlist}></div>
+            <div className={styles.contlist2}></div>
             <div className={styles.textbox}>
               <span className={styles.detailtitle}>Our History</span>
               <span className={styles.detaildes}>
@@ -45,7 +59,19 @@ const About = () => {
             </div>
             <img className={styles.imgbox} src={zimg2} alt={'about'} />
           </div>
-
+          <span className={styles.awardtitle}>Partner that Trust Us </span>
+          <div className={styles.titleline}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          <div className={styles.partners}>
+          <img src={zimg} alt="award" className={styles.award}/>
+          <img src={zimg} alt="award" className={styles.award}/>
+          <img src={zimg} alt="award" className={styles.award}/>
+          <img src={zimg} alt="award" className={styles.award}/>
+          <img src={zimg} alt="award" className={styles.award}/>
+          </div>
         </div>
       </div>
     </>

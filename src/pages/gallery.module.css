@@ -36,6 +36,31 @@
 .titleline span:nth-child(2){
     background: rgb(164,136,46);
 }
+.searchbox{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #3b3927;
+    gap: 10px;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.searchlinks:hover{
+    border:1px solid rgb(164,136,46);
+}
+.searchlinks{
+    padding: 0 20px;
+    height: 40px;
+    border:1px solid transparent;
+    color: rgb(164,136,46);
+    cursor: pointer;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .lists{
     width: 100%;
     display: flex;

@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./gallery.module.css";
 import PageIntro from '../components/cards/PageIntro';
 import zimg from '../assets/gallery.jpg'
 import GalleryCard from '../components/cards/GalleryCard';
-import sandpik from '../assets/logo.png'
-import lithiumpik from '../assets/logo.png'
-import tanpik from '../assets/logo.png'
-import coalpik from '../assets/logo.png'
-import ironpik from '../assets/logo.png'
-import goldpik from '../assets/logo.png'
-import opalpik from '../assets/logo.png'
-import copalpik from '../assets/logo.png'
-import ampik from '../assets/logo.png'
-import obpik from '../assets/logo.png'
+import sandpik from '../assets/products/sikasand.png'
+import lithiumpik from '../assets/products/lithium.png'
+import tanpik from '../assets/products/tantalum.png'
+import coalpik from '../assets/products/Coal.png'
+import ironpik from '../assets/products/iron.png'
+import goldpik from '../assets/products/gold.png'
+import opalpik from '../assets/products/opal.png'
+import copalpik from '../assets/products/copal.png'
+import ampik from '../assets/products/amytst.png'
+import obpik from '../assets/products/obsidian.png'
 
 const Gallerys = () => {
 
@@ -83,6 +83,17 @@ const Gallerys = () => {
       "description": "Crystal Opal is a captivating gemstone renowned for its translucent beauty and captivating play of colors. This exquisite gem holds a special place in various industries and is treasured for its unique properties. In jewelry and decorative arts, Crystal Opal's ethereal colors create enchanting pieces that reflect elegance and sophistication. Beyond its aesthetic appeal, this gemstone is believed to possess healing and spiritual properties, promoting harmony, clarity, and positive energy. Crystal Opal's captivating allure extends to specialized industries as well, where its optical properties find applications in cutting-edge technologies. With its mesmerizing beauty and versatile uses, Crystal Opal continues to inspire awe and admiration."
     }
   ]
+
+  const [filterName,setFilterName]=useState('')
+  
+
+  let filteredItems;
+  if (filterName !== '') {
+    filteredItems = galleryData.filter(item => item.name.toLowerCase() === filterName.toLowerCase());
+  } else {
+    filteredItems = galleryData;
+  }
+
   return (
     <>
       <PageIntro text={'Gallery'} img={zimg}/>
@@ -96,8 +107,16 @@ const Gallerys = () => {
               <span></span>
             </div>
           </div>
+          <div className={styles.searchbox}>
+            <span className={styles.searchlinks} onClick={()=>setFilterName('')} style={{background:filterName===''?'rgb(164,136,46)':'white',color:filterName===''?'white':'rgb(164,136,46)'}}>All</span>
+            {galleryData.map((l)=>
+            <span className={styles.searchlinks} onClick={()=>setFilterName(l.name)} style={{background:filterName===l.name?'rgb(164,136,46)':'white',color:filterName===l.name?'white':'rgb(164,136,46)'}} key={l.id}>{l.name}</span>
+            )}
+          </div>
           <div className={styles.lists}>
-          {galleryData.map((l)=><GalleryCard key={l.id} {...l}/>)}
+          {
+          filteredItems.map((l)=><GalleryCard key={l.id} {...l}/>)
+          }
           </div>
         </div>
       </div>

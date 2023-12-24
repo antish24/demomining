@@ -9,7 +9,7 @@ const GalleryCard = (data) => {
   return (
     <div className={styles.cont}>
         <img src={data.pic} alt='pic' className={styles.img}/>
-        <div className={styles.name}><NavLink state={data} onClick={scrollTop} to={`/service/${data.name}`}>{data.name.toUpperCase()}</NavLink></div>
+        <div className={styles.name}><NavLink state={data} onClick={scrollTop} to={`/gallery/${data.name}`}>{data.name.toUpperCase()}</NavLink></div>
     </div>
   )
 }
