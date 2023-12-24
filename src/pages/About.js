@@ -1,22 +1,55 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 import styles from "./about.module.css";
-import PageIntro from '../components/cards/PageIntro';
-import zimg from '../assets/about.jpg'
+import PageIntro from "../components/cards/PageIntro";
+import zimg from "../assets/about.jpg";
+import zimg1 from "../assets/product.jpg";
+import zimg2 from "../assets/gallery.jpg";
 
 const About = () => {
   useEffect(() => {
-    document.title = 'Mining - About Us';
+    document.title = "Mining - About Us";
   }, []);
   return (
     <>
-      <PageIntro text={'About Us'} img={zimg}/>
-    <div className={styles.cont}>
+      <PageIntro text={"About Us"} img={zimg} />
+      <div className={styles.cont}>
         <div className={styles.box}>
-          <h1>About Page </h1>
-        </div>
-    </div>
-    </>
-  )
-}
+          <div className={styles.lists}>
+            <div className={styles.contlist}></div>
+            <img className={styles.imgbox} src={zimg1} alt={'about'} />
+            <div className={styles.textbox}>
+              <span className={styles.detailtitle}>Our Mission</span>
+              <span className={styles.detaildes}>
+                Welcome to our mining company, where we have been at the
+                forefront of the industry for over two decades. Founded in 2000,
+                our company has grown from a small-scale operation to a leading
+                player in the mining sector. We are dedicated to providing
+                exceptional mining services, leveraging advanced technologies
+                and an experienced team.
+              </span>
+            </div>
+          </div>
 
-export default About
+          <div className={styles.lists}>
+            <div className={styles.contlist}></div>
+            <div className={styles.textbox}>
+              <span className={styles.detailtitle}>Our History</span>
+              <span className={styles.detaildes}>
+                Welcome to our mining company, where we have been at the
+                forefront of the industry for over two decades. Founded in 2000,
+                our company has grown from a small-scale operation to a leading
+                player in the mining sector. We are dedicated to providing
+                exceptional mining services, leveraging advanced technologies
+                and an experienced team.
+              </span>
+            </div>
+            <img className={styles.imgbox} src={zimg2} alt={'about'} />
+          </div>
+
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default About;
