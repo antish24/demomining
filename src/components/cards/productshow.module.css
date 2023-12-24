@@ -52,12 +52,14 @@
     justify-content: center;
     gap: 5px;
     z-index: 1;
+    gap: 20px;
 }
 .title{
     opacity: 1;
     font-size: 120px;
     transition: all 1.5s;
     transform: translateY(0);
+    line-height:90%;
     color: rgb(164,136,46);
 }
 .hiddentitle{
@@ -71,9 +73,41 @@
     transform: translateX(0);
     opacity: 1;
 }
+.orderbtnbox{
+    width: 100%;
+}
 .hiddendes{
     transform: translateX(40%);
     opacity: 0;
+}
+.orderbtn{
+    transition: all 1.5s;
+    transform: translateY(0);
+    opacity: 1;
+    text-decoration: none;
+    background: rgb(164,136,46);
+    color: white;
+    width:130px;
+    height:40px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 2px 5px rgb(164,136,46);
+}
+.hiddenorderbtn{
+    transform: translateY(50%);
+    opacity: 0;
+    text-decoration: none;
+    background: rgb(164,136,46);
+    color: white;
+    width:130px;
+    height:40px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 2px 5px rgb(164,136,46);
 }
 .imgs{
     width: 70%;
@@ -139,7 +173,7 @@
     }
     .imgs{
         opacity: 1;
-        height: 65%;
+        height: 50%;
         bottom: 0;
         position: absolute;
     }

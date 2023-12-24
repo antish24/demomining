@@ -1,0 +1,36 @@
+.cont{
+    width: 300px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.top{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgbox{
+    width: 80px;
+    height: 80px;
+    background: #000;
+    border-radius: 50%;
+}
+.namebox{
+    display: flex;
+    width:calc(100% - 90px);
+    flex-direction: column;
+}
+.stars{
+    color:rgb(164,136,46);
+}
+.text{
+    width: 95%;
+    text-overflow: ellipsis;
+    white-space:wrap;
+    overflow: hidden;
+    text-align: justify;
+    height: 190px;
+}

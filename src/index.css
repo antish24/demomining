@@ -9,6 +9,8 @@ body {
   font-family:'CustomFont';
   overflow-x: hidden;
   background-image: url('../public/bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 ::-webkit-scrollbar{

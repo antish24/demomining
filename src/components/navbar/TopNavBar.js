@@ -29,11 +29,13 @@ const TopNavBar = () => {
           <img className={styles.logo} src={logo} alt="logo"/><span className={styles.logoname}>ACORDIA</span>
         </NavLink>
         <div className={styles.linkbox}>
-          {Links.map((link=><NavLink onClick={()=>scrollTop()} style={{borderColor:location.pathname===link.href?'rgb(164,136,46)':'transparent'}} key={link.id} to={link.href}>{link.name}</NavLink>))}
+          {Links.map((link=><NavLink onClick={()=>scrollTop()} style={{color:location.pathname===link.href?'rgb(164,136,46)':'gray'}} key={link.id} to={link.href}>{link.name}</NavLink>))}
+          <NavLink onClick={()=>scrollTop()} className={styles.alinks} to={'/appointment'}>Appointment</NavLink>
         </div>
         <div className={styles.menulinkbox} style={{top:showMenu?'0':'-120%'}}>
             <div className={styles.closemenu} onClick={()=>setShowMenu(false)}><AiFillCloseCircle size={30}/></div>
           {Links.map((link=><NavLink onClick={()=>{setShowMenu(false);scrollTop()}} style={{color:location.pathname===link.href?'rgb(164,136,46)':'rgba(0,0,0,.7)'}} key={link.id} to={link.href}>{link.name}</NavLink>))}
+          <NavLink onClick={()=>{setShowMenu(false);scrollTop()}} className={styles.alinks} to={'/appointment'}>Appointment</NavLink>
         </div>
         <div className={styles.menubox} onClick={()=>setShowMenu(true)}><RiMenu4Line size={25}/></div>
       </div>

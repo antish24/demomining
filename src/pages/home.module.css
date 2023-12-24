@@ -26,7 +26,7 @@
     left: 0;
 }
 .infobox{
-    width: 90%;
+    width: 550px;
     min-height: 100px;
     background: rgba(0, 0, 0, 0.558);
     display: flex;
@@ -38,9 +38,19 @@
     border-top: 4px solid rgb(255, 196, 0);
     padding: 10px;
 }
+
+@media(max-width:600px){
+    .infobox{
+        width: 90%;
+    }
+}
 .infobox span:first-child{
     font-size: 160%;
+    margin-bottom: 20px;
     font-weight: bold;
+}
+.infobox span{
+    width: 100%;
 }
 .video{
     width: 100%;

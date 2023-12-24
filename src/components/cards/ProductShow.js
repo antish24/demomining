@@ -4,6 +4,7 @@ import opal1 from "../../assets/opal1.png";
 import opal2 from "../../assets/opal2.png";
 import opal3 from "../../assets/opal3.png";
 import opal4 from "../../assets/logopng.png";
+import { NavLink } from "react-router-dom";
 
 const ProductShow = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -71,6 +72,9 @@ const ProductShow = () => {
       <div className={styles.content}>
         <span className={isVisible ? styles.title:styles.hiddentitle}>{minerals.find((mineral) => mineral.id === selectedItem).name}</span>
         <span className={isVisible ? styles.description : styles.hiddendes}>{minerals.find((mineral) => mineral.id === selectedItem).description}</span>
+        <div className={styles.orderbtnbox}>
+          <NavLink className={isVisible ? styles.orderbtn:styles.hiddenorderbtn}>Order Now</NavLink>
+        </div>
       </div>
       <div className={styles.imgs}><img className={isVisible ? styles.showimg:styles.hideimg} src={minerals.find((mineral) => mineral.id === selectedItem).img} alt="mineral"/></div>
       </div>

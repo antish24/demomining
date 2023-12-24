@@ -9,6 +9,7 @@ import About from './pages/About'
 import GoTop from './components/navbar/GoTop'
 import Loading from './components/Loading/Loading'
 import Footer from './components/footer/Footer'
+import Appointment from './pages/Apponitment'
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +31,7 @@ const App = () => {
       <Route element={<About/>} path='/about'/>
       <Route element={<Gallery/>} path='/gallery'/>
       <Route element={<Contact/>} path='/contact'/>
+      <Route element={<Appointment/>} path='/appointment'/>
     </Routes>
     <GoTop/>
     <Footer/>

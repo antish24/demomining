@@ -1,0 +1,66 @@
+.cont{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    background: white;
+    box-shadow: 0 0 2px rgba(70, 70, 70, 0.215);
+    overflow: hidden;
+    border-radius: 10px;
+    gap: 10px;
+}
+.imgbox{
+    width: 40%;
+    height: 150px;
+}
+.zimg{
+    width: 300px;
+    height: 150px;
+    object-fit: contain;
+    scale: 2;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}
+.title{
+    font-size: 23px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.detail{
+    height: 100px;
+    width: 90%;
+    text-align: center;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.morebtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+}
+.morebtn .button{
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 25px;
+    background: white;
+    color: rgb(164,136,46);
+    margin-right: 10px;
+}
+.morebtn .button:hover{
+    scale: 1.1;
+    transition: .4s all;
+}

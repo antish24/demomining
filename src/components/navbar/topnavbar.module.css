@@ -57,20 +57,32 @@
 .linkbox{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 .linkbox a{
     text-decoration: none;
     font-size: 16px;
+}
+.alinks{
+    border:2px solid rgb(164,136,46);
     color: rgb(164,136,46);
-    border-bottom: 3px solid;
-    padding-bottom: 3px;
+    padding: 0;
+    height: 35px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.alinks:hover{
+    color: white;
+    background: rgb(164,136,46);
 }
 .menulinkbox a{
     text-decoration: none;
     font-size: 16px;
     background: white;
-    width: 100px;
+    min-width: 100px;
     height: 30px;
     display: flex;
     align-items: center;
