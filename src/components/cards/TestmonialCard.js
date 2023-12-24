@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './testmonialcard.module.css'
 import { FaStar } from 'react-icons/fa'
-
+import { BsFillPersonFill } from "react-icons/bs";
 const TestmonialCard = (data) => {
   const stars=[
     {id:1},
@@ -13,7 +13,7 @@ const TestmonialCard = (data) => {
   return (
     <div className={styles.cont}>
         <div className={styles.top}>
-            <div className={styles.imgbox}></div>
+            <div className={styles.imgbox}><BsFillPersonFill/></div>
             <div className={styles.namebox}>
                 <span className={styles.stars}>
                   {stars.map((l)=><FaStar key={l.id} color={l.id > data.rate ? 'gray':'rgb(164,136,46)'}/>)}

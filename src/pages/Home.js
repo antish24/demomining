@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./home.module.css";
 import ProductShow from "../components/cards/ProductShow";
 import video from "../assets/bg.mp4";
@@ -7,6 +7,11 @@ import GalleryReview from "../components/cards/GalleryReview";
 import Testimonials from "../components/cards/Testimonials";
 
 const Home = () => {
+
+  useEffect(() => {
+    document.title = 'Mining - Home';
+  }, []);
+
   return (
     <div className={styles.cont}>
       <div className={styles.videobox}>

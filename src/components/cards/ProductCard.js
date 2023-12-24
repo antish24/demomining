@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./productcard.module.css";
 import { NavLink } from "react-router-dom";
-import pic from '../../assets/opal2.png'
 import { FaArrowRight } from 'react-icons/fa'
-const ProductCard = () => {
+const ProductCard = (data) => {
 
   const scrollTop=()=>{
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -11,15 +10,11 @@ const ProductCard = () => {
   
   return (
     <div className={styles.cont}>
-      <div className={styles.imgbox}><img className={styles.zimg} src={pic} alt="opal"/></div>
-      <span className={styles.title}>Exploration Equipment</span>
-      <span className={styles.detail}>
-      We offer a wide selection of exploration equipment, including drilling rigs, core drilling tools, 
-      geological instruments, and surveying equipment. Our products are designed to assist in the identification 
-      and evaluation of potential mining sites.
-      </span>
+      <div className={styles.imgbox}><img className={styles.zimg} src={data.pic} alt={data.name}/></div>
+      <span className={styles.title}>{data.name}</span>
+      <span className={styles.detail}>{data.description}</span>
       <div className={styles.morebtn}>
-        <NavLink className={styles.button} onClick={scrollTop} to={'/service'}><FaArrowRight/></NavLink>
+        <NavLink state={data} className={styles.button} onClick={scrollTop} to={`/service/${data.name}`}><FaArrowRight/></NavLink>
       </div>
     </div>
   );

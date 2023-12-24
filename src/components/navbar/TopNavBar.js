@@ -29,7 +29,7 @@ const TopNavBar = () => {
           <img className={styles.logo} src={logo} alt="logo"/><span className={styles.logoname}>ACORDIA</span>
         </NavLink>
         <div className={styles.linkbox}>
-          {Links.map((link=><NavLink onClick={()=>scrollTop()} style={{color:location.pathname===link.href?'rgb(164,136,46)':'gray'}} key={link.id} to={link.href}>{link.name}</NavLink>))}
+          {Links.map((link=><NavLink onClick={()=>scrollTop()} style={{color:location.pathname===link.href || (location.pathname.startsWith(`/service`) && location.pathname.startsWith('/service')===link.href.startsWith('/service'))?'rgb(164,136,46)':'gray'}} key={link.id} to={link.href}>{link.name}</NavLink>))}
           <NavLink onClick={()=>scrollTop()} className={styles.alinks} to={'/appointment'}>Appointment</NavLink>
         </div>
         <div className={styles.menulinkbox} style={{top:showMenu?'0':'-120%'}}>

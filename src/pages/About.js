@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from "./about.module.css";
 import PageIntro from '../components/cards/PageIntro';
 import zimg from '../assets/about.jpg'
 
 const About = () => {
+  useEffect(() => {
+    document.title = 'Mining - About Us';
+  }, []);
   return (
     <>
       <PageIntro text={'About Us'} img={zimg}/>

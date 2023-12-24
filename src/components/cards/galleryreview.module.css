@@ -1,6 +1,5 @@
 .cont{
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,26 +35,19 @@
 }
 .lists{
     display: grid;
-    grid-template-columns: repeat(4,auto);
+    grid-template-columns: repeat(3,auto);
     justify-content: space-around;
     gap: 10px;
     width: 100%;
 }
 @media(max-width:1365px){
     .lists{
-        grid-template-columns: repeat(3,auto);
-    }
-}
-@media(max-width:1028px){
-    .lists{
         grid-template-columns: repeat(2,auto);
     }
 }
-@media(max-width:680px){
+@media(max-width:900px){
     .lists{
-        grid-template-columns: auto;
-        justify-content: space-around;
-        align-items: center;
+        grid-template-columns:auto;
     }
 }
 .moreservice{
