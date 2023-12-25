@@ -37,7 +37,7 @@
     background: rgb(164,136,46);
 }
 .searchbox{
-    width: 100%;
+    width: calc(100% - 20px);
     min-height: 50px;
     display: flex;
     flex-wrap: wrap;
