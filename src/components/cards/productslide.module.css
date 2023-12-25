@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    overflow: hidden;
 }
 .titlebox{
     width: 100%;
@@ -76,12 +77,14 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    transition: all .5s;
+    transition: all .6s;
     object-fit: contain;
 }
 .itemimg{
     width: 130px;
     height: 130px;
+    object-fit: contain;
+    scale: 1.3;
 }
 .itemtxt{
     width: 90%;
