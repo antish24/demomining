@@ -10,6 +10,7 @@ import pic4 from '../assets/Separation.png'
 import pic5 from '../assets/SustainableMining.png'
 import pic6 from '../assets/MiningMachinery.png'
 import pic7 from '../assets/GemistoneMining.png'
+import ProductSlide from "../components/cards/ProductSlide";
 
 const Service = () => {
 
@@ -66,6 +67,7 @@ const Service = () => {
   return (
     <>
       <PageIntro text={"Service"} img={zimg} />
+      <ProductSlide/>
       <div className={styles.cont}>
         <div className={styles.box}>
         <div className={styles.titlebox}>
