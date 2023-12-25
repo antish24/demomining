@@ -23,7 +23,7 @@ const Footer = () => {
             </NavLink>
             <div className={styles.content}>
                 <div className={styles.links}>{links.map(l=><NavLink onClick={scrollTop} key={l.id} to={l.herf}>{l.name}</NavLink>)}</div>
-                <div className={styles.copyright}> &copy; Copyright ACORDIA. All Rights Reserved
+                <div className={styles.copyright}> &copy; Copyright ZOE MINING. All Rights Reserved
                 Designed by <a href='https://ish24.vercel.app/'>Zoe Life Technologies</a></div>
             </div>
         </div>
