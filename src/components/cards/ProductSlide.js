@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './productslide.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay,Navigation  } from 'swiper/modules';
 
 import sandpik from '../../assets/products/sikasand.png'
 import lithiumpik from '../../assets/products/lithium.png'
@@ -16,7 +16,7 @@ import copalpik from '../../assets/products/copal.png'
 import ampik from '../../assets/products/amytst.png'
 import obpik from '../../assets/products/obsidian.png'
 
-
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 const ProductSlide = () => {
     const galleryData=[
@@ -82,10 +82,36 @@ const ProductSlide = () => {
         }
       ]
       
+      const [currentSlideIds, setCurrentSlideIds] = useState([]);
+      const [middleItemId, setMiddleItemId] = useState(null);
+
+      const handleSlideChange = (swiper) => {
+        const { activeIndex, slides } = swiper;
+        const visibleSlideIds = slides
+          .filter((slide, index) => index >= activeIndex && index < activeIndex + swiper.params.slidesPerView)
+          .map((slide) => parseInt(slide.getAttribute('data-id'), 10));
+    
+        setCurrentSlideIds(visibleSlideIds);
+      };
+    
+      useEffect(() => {
+        if (currentSlideIds.length > 0) {
+          const middleIndex = Math.floor(currentSlideIds.length / 2);
+          setMiddleItemId(currentSlideIds[middleIndex]);
+        } else {
+          setMiddleItemId(null);
+        }
+      }, [currentSlideIds]);
+    
+
+  const getCurrentVisibleItemIds = () => {
+    return currentSlideIds;
+  };
+
   return (
     <div className={styles.cont}>
         <div className={styles.titlebox}>
-            <span className={styles.title}>Featured Products</span>
+            <span className={styles.title}>Featured Products {getCurrentVisibleItemIds()}</span>
             <div className={styles.titleline}>
               <span></span>
               <span></span>
@@ -98,6 +124,7 @@ const ProductSlide = () => {
           <Swiper
             slidesPerView={1}
             spaceBetween={10}
+            onSlideChange={handleSlideChange} 
             loop={true}
             breakpoints={{
               '@0.00': {
@@ -125,20 +152,25 @@ const ProductSlide = () => {
           delay: 4500,
           disableOnInteraction: false,
         }}
-            modules={[Autoplay]}
+            modules={[Autoplay,Navigation ]}
         className={styles.myswiper}
       >
-        {galleryData.map((l,index)=>(
-            <SwiperSlide className={styles.slide} key={l.id}>
-            <div className={styles.itembox} style={{background:index===3?'red':'black'}}>
+        {galleryData.map((l)=>(
+            <SwiperSlide className={styles.slide} key={l.id} data-id={l.id}>
+            <div className={middleItemId===l.id ?styles.activeitembox:styles.itembox} >
                 <img className={styles.itemimg} src={l.pic} alt={l.name}/>
                 <div className={styles.itemtxt}>
                     <span className={styles.itemtitle}>{l.name}</span>
                     <span className={styles.itemdes}>{l.description}</span>
                 </div>
             </div>
+            
         </SwiperSlide>
         ))}
+        <div className={styles.customNavigation}>
+              <FaAngleLeft className={styles.navbtnl}/>
+              <FaAngleRight className={styles.navbtnr}/>
+          </div>
       </Swiper>
 
           </div>
