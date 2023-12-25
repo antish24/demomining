@@ -3,13 +3,13 @@ import styles from "./service.module.css";
 import PageIntro from "../components/cards/PageIntro";
 import zimg from "../assets/product.jpg";
 import ProductCard from "../components/cards/ProductCard";
-import pic from '../assets/opal2.png'
-import pic2 from '../assets/opal1.png'
-import pic3 from '../assets/opal3.png'
-import pic4 from '../assets/gallery.jpg'
-import pic5 from '../assets/contact.jpg'
-import pic6 from '../assets/product.jpg'
-import pic7 from '../assets/about.jpg'
+import pic from '../assets/Exploration Services.png'
+import pic2 from '../assets/Efficient Extraction.png'
+import pic3 from '../assets/Secure Environment.png'
+import pic4 from '../assets/Separation.png'
+import pic5 from '../assets/SustainableMining.png'
+import pic6 from '../assets/MiningMachinery.png'
+import pic7 from '../assets/GemistoneMining.png'
 
 const Service = () => {
 
@@ -21,7 +21,7 @@ const Service = () => {
     {
       "id": 1,
       "name": "Exploration Services",
-      "pic": pic5,
+      "pic": pic,
       "description": "At our mining company, we specialize in providing comprehensive exploration services to assist mining operations in identifying and evaluating potential mining sites. Our team of skilled geologists and mining experts utilizes state-of-the-art techniques and advanced technologies to conduct detailed geological surveys, remote sensing, geochemical analysis, and geophysical surveys. By meticulously analyzing geological data, we help our clients uncover valuable mineral deposits with precision and efficiency. Our comprehensive approach enables mining companies to make informed decisions, minimizing risks and maximizing the potential for successful mining operations. Trust us to be your reliable partner in discovering and unlocking the untapped resources beneath the Earth's surface."
     },
     {
@@ -45,13 +45,13 @@ const Service = () => {
     {
       "id": 5,
       "name": "Sustainable Mining",
-      "pic": pic6,
+      "pic": pic5,
       "description": "At our mining company, we are committed to minimizing the environmental impact of mining operations. We offer sustainable solutions that prioritize environmental stewardship and social responsibility. Our experts assess the environmental risks associated with mining activities and develop tailored strategies to mitigate them. This includes implementing efficient water management systems, adopting eco-friendly mining practices, and promoting land reclamation and restoration. By integrating sustainable practices into mining operations, we help our clients achieve long-term sustainability, preserve natural resources, and contribute positively to the communities in which they operate."
     },
     {
       "id": 6,
       "name": "Mining Machinery",
-      "pic": pic,
+      "pic": pic6,
       "description": "Our mining company understands the importance of keeping mining machinery operating at peak performance. We offer a comprehensive range of spare parts and components for various mining equipment, ensuring minimal downtime and efficient maintenance. Whether it's replacement parts for crushers, conveyor systems, or hydraulic components, we provide high-quality products that meet industry standards. Our extensive inventory and quick turnaround times ensure that mining operations can rely on us for prompt and reliable spare parts supply. With our commitment to customer satisfaction, we aim to be your trusted partner in keeping your mining machinery running smoothly."
     },
     {
