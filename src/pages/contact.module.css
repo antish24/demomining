@@ -99,12 +99,95 @@
     background: #000;
 }
 .formbox{
-    width: 600px;
-    height: 500px;
+    width: 580px;
+    height: 480px;
     border-top: 3px solid rgb(164,136,46);
     border-bottom: 3px solid rgb(164,136,46);
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.inputcont{
+    display: flex;
+    flex-direction: column;
+}
+.inputcont span{
+    font-size: 17px;
+}
+.inputcont input{
+    border: 1px solid rgba(128, 128, 128, 0.499);
+    outline: none;
+    padding: 3px;
+    width: 240px;
+    height: 30px;
+    font-size: 16px;
+    border-radius:5px;
+}
+.inputcont textarea{
+    border: 1px solid rgba(128, 128, 128, 0.499);
+    font-size: 16px;
+    width: 500px;
+    height: 150px;
+    padding: 5px;
+    border-radius:5px;
+    outline: none;
+    resize: none;
+}
+@media(max-width:700px){
+    .formbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    .inputcont textarea{
+        width:450px;
+    }
+}
+@media(max-width:500px){
+    .inputcont textarea{
+        width:300px;
+    }
+}
+@media(max-width:350px){
+    .inputcont textarea{
+        width:270px;
+    }
+}
+.inputcont input:focus{
+    border: 1px solid rgb(164,136,46);
+}
+.inputcont textarea:focus{
+    border: 1px solid rgb(164,136,46);
+}
+.btncont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.formerr{
+    height: 50px;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sendbtn{
+    width: 120px;
+    height: 40px;
+    background: rgb(164,136,46);
+    border-radius: 4px;
+    border: 1px solid rgb(164,136,46);
+    color: white;
+}
+.sendbtn:hover{
+    background: white;
+    color: rgb(164,136,46);
 }
 @media(max-width:1300px){
     .locationbox{
