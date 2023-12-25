@@ -128,6 +128,10 @@
 .hideimg{
     transform: translateX(2%);
     opacity: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all .5s;
 }
 @media(max-width:800px){
     .contentbox{
@@ -177,7 +181,7 @@
         position: absolute;
     }
     .showimg{
-        scale:1.5;
+        scale:1.2;
     }
     .cont{
         height: 60vh;
