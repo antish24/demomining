@@ -104,14 +104,14 @@ const ProductSlide = () => {
       }, [currentSlideIds]);
     
 
-  const getCurrentVisibleItemIds = () => {
-    return currentSlideIds;
-  };
+  // const getCurrentVisibleItemIds = () => {
+  //   return currentSlideIds;
+  // };
 
   return (
     <div className={styles.cont}>
         <div className={styles.titlebox}>
-            <span className={styles.title}>Featured Products {getCurrentVisibleItemIds()}</span>
+            <span className={styles.title}>Featured Products</span>
             <div className={styles.titleline}>
               <span></span>
               <span></span>
