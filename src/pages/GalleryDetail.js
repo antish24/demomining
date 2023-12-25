@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
+import { FaPlay } from 'react-icons/fa'
 
 const GalleryDetail = () => {
   const { id } = useParams();
@@ -31,7 +32,7 @@ const GalleryDetail = () => {
             </div>
           </div>
           <div className={styles.gallerybox}>
-            <div className={styles.vidbox}></div>
+            <div className={styles.vidbox}><div className={styles.playbox}><FaPlay/></div></div>
             <div className={styles.imgsbox}>
             <Swiper
             slidesPerView={1}
