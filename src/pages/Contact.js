@@ -3,6 +3,7 @@ import styles from "./contact.module.css";
 import PageIntro from "../components/cards/PageIntro";
 import zimg from '../assets/contact.jpg'
 import {FaMailBulk, FaMapPin, FaPhone } from 'react-icons/fa'
+import MapComponent from "../components/map/Map";
 const Contact = () => {
   useEffect(() => {
     document.title = 'Mining - Contact Us';
@@ -40,7 +41,9 @@ const Contact = () => {
             <div className={styles.location}><span className={styles.icons}><FaMapPin/></span><div className={styles.infobox}><span>Location:</span><span>A108 Adam Street, New York, NY 535022</span></div></div>
             <div className={styles.location}><span className={styles.icons}><FaMailBulk/></span><div className={styles.infobox}><span>Email:</span><span>oureamil@gmail.com</span></div></div>
               <div className={styles.location}><span className={styles.icons}><FaPhone/></span><div className={styles.infobox}><span>Call:</span><span>+251 9 11 75 50 25</span></div></div>
-              <div className={styles.map}></div>
+              <div className={styles.map}>
+                <MapComponent/>
+              </div>
             </div>
             <form ref={formRef} onSubmit={handelMsg} className={styles.formbox}>
               <div className={styles.inputcont}><span>Your Name</span><input maxLength={20} required minLength={5} type="text"/></div>

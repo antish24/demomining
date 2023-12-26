@@ -96,6 +96,7 @@
 .map{
     width: 90%;
     height:300px;
+    overflow: hidden;
     background: #000;
 }
 .formbox{
