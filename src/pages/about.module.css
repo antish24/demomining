@@ -86,7 +86,7 @@
 .titleline span:nth-child(2){
     background: rgb(164,136,46);
 }
-.awards{
+.awardscont{
     width: 100%;
     min-height: 200px;
     background: #3b3927;
@@ -97,9 +97,68 @@
     flex-wrap: wrap;
     gap: 50px;
 }
-.award{
+.awardbox{
     width: 150px;
     height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blackbox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.viewawardbox{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000c4;
+    display: flex;
+    align-items: center;
+    z-index: 30;
+    justify-content: center;
+}
+.viewblackbox{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.viewawardbtn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: rgb(164,136,46);
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.closeaward{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+.blackbox:hover .viewawardbtn{
+    display: flex;
+}
+.awardimg{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 .partners{
@@ -112,6 +171,12 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
+}
+.partnersimg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 @media(max-width:1000px){
     .lists{

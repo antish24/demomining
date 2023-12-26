@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./about.module.css";
 import PageIntro from "../components/cards/PageIntro";
 import zimg from "../assets/about.jpg";
 import zimg1 from "../assets/product.jpg";
 import zimg2 from "../assets/gallery.jpg";
+import {FaPlus, FaTimes} from 'react-icons/fa'
 
 const About = () => {
   useEffect(() => {
@@ -17,6 +18,17 @@ const About = () => {
     {id:4,pic:zimg2},
     {id:5,pic:zimg1},
   ]
+
+  const Partners=[
+    {id:1,pic:zimg1},
+    {id:2,pic:zimg2},
+    {id:3,pic:zimg},
+    {id:4,pic:zimg2},
+    {id:5,pic:zimg1},
+  ]
+
+  const [viewAward,setViewAward]=useState(0)
+
   return (
     <>
       <PageIntro text={"About Us"} img={zimg} />
@@ -28,8 +40,15 @@ const About = () => {
               <span></span>
               <span></span>
             </div>
-        <div className={styles.awards}>
-            {Awards.map((l)=><img src={l.pic} key={l.id} alt="award" className={styles.award}/>)}
+        <div className={styles.awardscont}>
+            {Awards.map((l)=>(
+            <div className={l.id===viewAward ?styles.viewawardbox:styles.awardbox} key={l.id}>
+              <div className={l.id===viewAward ?styles.viewblackbox:styles.blackbox}>
+              <span onClick={()=>setViewAward(l.id)} className={styles.viewawardbtn}><FaPlus/></span>
+              <img src={l.pic} alt="award" style={{borderRadius:l.id===viewAward?'':'50%'}} className={styles.awardimg}/>
+              <span className={styles.closeaward} style={{display:l.id===viewAward?'flex':'none'}} onClick={()=>setViewAward(0)}><FaTimes/></span>
+              </div>
+            </div>))}
           </div>
           <div className={styles.lists}>
             <div className={styles.contlist}></div>
@@ -69,11 +88,7 @@ const About = () => {
               <span></span>
             </div>
           <div className={styles.partners}>
-          <img src={zimg} alt="award" className={styles.award}/>
-          <img src={zimg} alt="award" className={styles.award}/>
-          <img src={zimg} alt="award" className={styles.award}/>
-          <img src={zimg} alt="award" className={styles.award}/>
-          <img src={zimg} alt="award" className={styles.award}/>
+          {Partners.map((l)=><img key={l.id} src={l.pic} alt="award" className={styles.partnersimg}/>)}
           </div>
         </div>
       </div>
