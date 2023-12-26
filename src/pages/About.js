@@ -9,6 +9,14 @@ const About = () => {
   useEffect(() => {
     document.title = "Mining - About Us";
   }, []);
+
+  const Awards=[
+    {id:1,pic:zimg},
+    {id:2,pic:zimg1},
+    {id:3,pic:zimg2},
+    {id:4,pic:zimg2},
+    {id:5,pic:zimg1},
+  ]
   return (
     <>
       <PageIntro text={"About Us"} img={zimg} />
@@ -21,12 +29,7 @@ const About = () => {
               <span></span>
             </div>
         <div className={styles.awards}>
-            <img src={zimg} alt="award" className={styles.award}/>
-            <img src={zimg} alt="award" className={styles.award}/>
-            <img src={zimg} alt="award" className={styles.award}/>
-            <img src={zimg} alt="award" className={styles.award}/>
-            <img src={zimg} alt="award" className={styles.award}/>
-            <img src={zimg} alt="award" className={styles.award}/>
+            {Awards.map((l)=><img src={l.pic} key={l.id} alt="award" className={styles.award}/>)}
           </div>
           <div className={styles.lists}>
             <div className={styles.contlist}></div>

@@ -27,8 +27,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <ProductShow />
       <div className={styles.box}>
-        <ProductShow />
         <ServiceReview/>
         <GalleryReview/>
         <Testimonials/>

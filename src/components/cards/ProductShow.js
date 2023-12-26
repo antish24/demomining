@@ -74,7 +74,8 @@ const ProductShow = () => {
     {id:5,rol:'05'},
 ]
   return (
-    <div className={styles.cont}>
+    <div className={styles.box}>
+      <div className={styles.cont}>
       <div className={styles.slider}>
         <div className={styles.lines}>{products.map(l=><span key={l.id} style={{background:selectedItem >= l.id?'rgb(164,136,46)':'transparent'}} className={styles.line}></span>)}</div>
         <div className={styles.nums}>{products.map(l=><span key={l.id} style={{background:selectedItem===l.id?'rgb(164,136,46)':'transparent',color:selectedItem===l.id?'white':'rgb(164,136,46)'}}  className={styles.rolnum}>{l.rol}</span>)}</div>
@@ -90,6 +91,7 @@ const ProductShow = () => {
       </div>
       <div className={styles.imgs}><img className={isVisible ? styles.showimg:styles.hideimg} src={minerals.find((mineral) => mineral.id === selectedItem).img} alt="mineral"/></div>
       </div>
+    </div>
     </div>
   );
 };
